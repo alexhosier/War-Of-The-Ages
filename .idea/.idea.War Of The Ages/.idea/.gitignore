@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.War Of The Ages.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../:\Unity Projects\War Of The Ages\.idea\.idea.War Of The Ages\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
