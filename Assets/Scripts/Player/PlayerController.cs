@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private float nextAttack;
     private PlayerUI playerUI;
     private int playerScore;
+    private AudioSource audioSource;
     
     #endregion
 
@@ -46,6 +47,9 @@ public class PlayerController : MonoBehaviour
 
         // Fetch the playerUI
         playerUI = GetComponent<PlayerUI>();
+        
+        // Fetch the AudioSource
+        audioSource = GetComponent<AudioSource>();
         
         // Fetch the shop controller
         shopController = GameObject.Find("Scripts").GetComponent<ShopController>();
@@ -140,6 +144,9 @@ public class PlayerController : MonoBehaviour
 
                 // Draw raycast
                 RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.right * attackRange);
+                
+                // Play the sound
+                audioSource.Play();
                 
                 // Check if it hit an enemy
                 if (hit.collider.gameObject.CompareTag("Enemy"))
